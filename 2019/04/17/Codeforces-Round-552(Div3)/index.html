@@ -17,7 +17,7 @@
 <meta property="og:description" content="题目列表：https://codeforces.com/contest/1154/problems 传送门：https://codeforces.com/contest/1154">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://fz-c.github.io/2019/04/17/Codeforces-Round-552(Div3)/div3-F.jpg">
-<meta property="og:updated_time" content="2019-04-16T23:29:09.697Z">
+<meta property="og:updated_time" content="2019-04-17T00:47:00.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces Round#552（Div3）">
 <meta name="twitter:description" content="题目列表：https://codeforces.com/contest/1154/problems 传送门：https://codeforces.com/contest/1154">
@@ -178,8 +178,6 @@
 <a id="more"></a>
 <p>这次CF的难度还是比较和谐的<del>(后背一凉)</del> 。</p>
 <h2 id="A-Restoring-Three-Numbers"><a href="#A-Restoring-Three-Numbers" class="headerlink" title="A. Restoring Three Numbers"></a>A. Restoring Three Numbers</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给出$a+b ,a+c ,b+c ,a+b+c$ 的值（可能不按顺序，$2 \leq x_i \leq 10^9$），求正整数$a,b,c$的值。</p>
-<p>老陈最近安利了 $N$ 个朋友来使用Steam，他们有一部分人在Steam上购买了或者退购了某款游戏。</p>
-<p>现在老陈知道他们在这段时间内购买/退购的情况 ，他想请你告诉他他的某些朋友拥有了几个游戏。</p>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>很明显，$a+b+c$肯定是最大的，将这个最大值依次减去另外三个值就可以得到这三个数。</p>
 <h3 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> num[<span class="number">4</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; num[i];</span><br><span class="line">	sort(num, num + <span class="number">4</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; num[<span class="number">3</span>] - num[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="B-Make-Them-Equal"><a href="#B-Make-Them-Equal" class="headerlink" title="B. Make Them Equal"></a>B. Make Them Equal</h2><h3 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意"></a>题目大意</h3><p>给定一个数组（数组不空且元素个数不大于100，元素值为正整数且不大于100），现在对数组的每一个元素都可以实施一次操作：</p>
@@ -566,15 +564,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Codeforces</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">div3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
               </li>
              
               <li class="article-tag-list-item">
