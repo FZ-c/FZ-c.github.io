@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://fz-c.github.io/2019/04/14/测试赛I题目及题解/TIM图片20190404164108.png">
 <meta property="og:image" content="http://fz-c.github.io/2019/04/14/测试赛I题目及题解/图片1.png">
-<meta property="og:updated_time" content="2019-04-16T23:29:30.544Z">
+<meta property="og:updated_time" content="2019-04-19T05:11:59.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试赛I题目及题解">
 <meta name="twitter:description" content="传送门：http://fzcoj.hustoj.com/contest.php?cid=1061">
@@ -250,7 +250,7 @@
 <h2 id="E-有升有降"><a href="#E-有升有降" class="headerlink" title="E.有升有降"></a>E.有升有降</h2><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>老陈某天的心情值跟过山车一样跌宕起伏，平常的时候，老陈的心情值是不下降的（即可能升高或不变但不会下降）。但是当老陈受到打击的时候<del>（做题自闭什么的）</del>，心情值就是不上升的（即可能下降或不变但不会上升）。</p>
 <p>他的朋友想去安慰<del>（调侃）</del>一下老陈：“你在$a$时间到$b$时间是不是受到了什么打击了啊说给我乐乐？”</p>
 <p>如果老陈在这段时间内的心情值前一部分是不下降的，剩下的部分是不上升的，那么他的朋友才会觉得这个提问有价值。所以请你判断一下这些提问时间是不是有价值的。</p>
-<h3 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述"></a>输入描述</h3><p>第一行包含两个整数$n$，$m$。分别代表这一天的时间和他的朋友询问的次数。($1 \leq n,m \leq 10^5$)</p>
+<h3 id="输入描述-3"><a href="#输入描述-3" class="headerlink" title="输入描述"></a>输入描述</h3><p>第一行包含两个整数$n$，$m$。分别代表这一天的时间和他的朋友询问的次数。($1 \leq n,m \leq 10^5​$)</p>
 <p>第二行包含$n$个整数代表这一天的每一个时间老陈的心情值。(均不大于$10^9$且均为正整数)</p>
 <p>接下来$m$行，每行包含两个正整数$a$，$b$，代表他的朋友询问的时间段。($1 \leq a \leq b \leq n $)</p>
 <h3 id="输出描述-3"><a href="#输出描述-3" class="headerlink" title="输出描述"></a>输出描述</h3><p>对于每一个时间段，如果是值得提问的，输出”Yes”；否则输出”No”。</p>
@@ -272,8 +272,8 @@
 <p>No</p>
 <p>Yes</p>
 </blockquote>
-<h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><p>$dp[i]$表示$a[i]$之前连续的不小于$a[i]$的数的个数，$rdp[i]$表示$a[i]$之后连续的不小于$a[i]$的数的个数。</p>
-<p>如果$dp[l]+rdp[r]&gt;=r-l+1$，那么就是$Yes$，否则为$No$。</p>
+<h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><p>$dp[i]$表示以$a[i]$为终点的连续不下降序列的长度，$rdp[i]$表示以$a[i]$为起点的连续不下降序列的长度。</p>
+<p>如果$rdp[l]+dp[r]&gt;=r-l+1$，那么就是$Yes$，否则为$No$。</p>
 <h3 id="参考代码-3"><a href="#参考代码-3" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100010</span>], dp[<span class="number">100010</span>], rdp[<span class="number">100010</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, Q, l, r;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;Q);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[i] &lt;= a[i - <span class="number">1</span>])</span><br><span class="line">            dp[i] = dp[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            dp[i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[i] &lt;= a[i + <span class="number">1</span>])</span><br><span class="line">            rdp[i] = rdp[i + <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            rdp[i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Q; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;l, &amp;r);</span><br><span class="line">        <span class="keyword">if</span> (rdp[l] + dp[r] &gt;= r - l + <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="F-刷墙"><a href="#F-刷墙" class="headerlink" title="F.刷墙"></a>F.刷墙</h2><h3 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h3><p>最近老陈的亲戚家重新装修，老陈被叫去帮忙刷墙。</p>
 <p>老陈拿着墙刷，刷着刷着感到无聊就转了一下。这转了一下不要紧，老陈的脑袋突然嗡的一声蹦出一个问题：</p>
@@ -432,7 +432,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Codeforces Round#552（Div3）
+          Codeforces Round
         
       </div>
     </a>
@@ -619,6 +619,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Codeforces</a>
               </li>
              
@@ -628,10 +632,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">div3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
               </li>
              
               <li class="article-tag-list-item">
