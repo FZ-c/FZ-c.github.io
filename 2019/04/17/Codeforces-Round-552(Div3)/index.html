@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://FZ-c.github.io">
-  <title>Codeforces Round | 老陈的程序员之路</title>
+  <title>Codeforces Round #552（Div3） | 老陈的程序员之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="题目列表：https://codeforces.com/contest/1154/problems 传送门：https://codeforces.com/contest/1154">
 <meta name="keywords" content="Codeforces,div3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Round">
+<meta property="og:title" content="Codeforces Round #552（Div3）">
 <meta property="og:url" content="http://FZ-c.github.io/2019/04/17/Codeforces-Round-552(Div3)/index.html">
 <meta property="og:site_name" content="老陈的程序员之路">
 <meta property="og:description" content="题目列表：https://codeforces.com/contest/1154/problems 传送门：https://codeforces.com/contest/1154">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://fz-c.github.io/2019/04/17/Codeforces-Round-552(Div3)/div3-F.jpg">
-<meta property="og:updated_time" content="2019-04-19T03:37:56.229Z">
+<meta property="og:updated_time" content="2019-04-22T14:29:00.281Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces Round">
+<meta name="twitter:title" content="Codeforces Round #552（Div3）">
 <meta name="twitter:description" content="题目列表：https://codeforces.com/contest/1154/problems 传送门：https://codeforces.com/contest/1154">
 <meta name="twitter:image" content="http://fz-c.github.io/2019/04/17/Codeforces-Round-552(Div3)/div3-F.jpg">
   
@@ -160,7 +160,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Codeforces Round
+      Codeforces Round #552（Div3）
     </h1>
   
 
@@ -189,16 +189,16 @@
 <h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><p>首先，去掉重复数字是必要的。（使用set）</p>
 <p>去重之后，对set的大小进行分类讨论：</p>
 <blockquote>
-<p>若set大小为1，则 $D=0​$ 。（元素无需变化）</p>
+<p>若set大小为1，则 $D=0$ 。（元素无需变化）</p>
 <p>若set大小为2：</p>
 <blockquote>
-<p>若两个元素的均值为整数：$D=(num[1]+num[0])/2-num[0]​$（即他们俩都转化为均值）</p>
+<p>若两个元素的均值为整数：$D=(num[1]+num[0])/2-num[0]$（即他们俩都转化为均值）</p>
 <p>若两个元素的均值不为整数：$D=num[1]-num[0]$</p>
 </blockquote>
 <p>若set大小为3：</p>
 <blockquote>
 <p>判断中间值与最大值最小值的差是否相等：</p>
-<p>相等：$D=num[1]-num[0]​$ （即中间值减较小值）</p>
+<p>相等：$D=num[1]-num[0]$ （即中间值减较小值）</p>
 <p>不相等：$-1$</p>
 </blockquote>
 <p>若set大小为其他情况：$-1$</p>
@@ -214,7 +214,7 @@
 <p>在阳光下：</p>
 <blockquote>
 <p>电池有电：电池电量$-1$，蓄电池电量$+1$。</p>
-<p>电池无电：蓄电池电量$-1​$。（切记这里无法充电）</p>
+<p>电池无电：蓄电池电量$-1$。（切记这里无法充电）</p>
 </blockquote>
 <p>不在阳光下：</p>
 <blockquote>
@@ -224,7 +224,7 @@
 </blockquote>
 <h3 id="参考代码-3"><a href="#参考代码-3" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">bool</span> sun[<span class="number">200010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, b, a;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; b &gt;&gt; a;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; sun[i];</span><br><span class="line">	<span class="comment">// a 充电</span></span><br><span class="line">    <span class="comment">//now_a now_b 为当前电池电量</span></span><br><span class="line">	<span class="keyword">int</span> now_a = a;</span><br><span class="line">	<span class="keyword">int</span> now_b = b;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (now_a == <span class="number">0</span> &amp;&amp; now_b == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; i - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (sun[i])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (now_b)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (now_a &lt; a)</span><br><span class="line">				&#123;</span><br><span class="line">					now_b--;</span><br><span class="line">					now_a++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					now_a--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				now_a--;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (now_a)</span><br><span class="line">				now_a--;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				now_b--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; n;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="E-Two-Teams"><a href="#E-Two-Teams" class="headerlink" title="E. Two Teams"></a>E. Two Teams</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>有两个教练来选人，第一个人先选。给定一排人的技巧值$a_i$。</p>
-<p>两个人选的策略是：找到还没被选的最大的一个，然后再选择它左边 $k​$ 个和右边 $k​$ 个。每次选完之后被选中的人出列。</p>
+<p>两个人选的策略是：找到还没被选的最大的一个，然后再选择它左边 $k$ 个和右边 $k$ 个。每次选完之后被选中的人出列。</p>
 <p>他们轮流选直到全部选完。输出原数列中的每个人分别都被第几个人选了。</p>
 <p>($1 \leq k \leq n \leq 2*10^5 , 1 \leq a_i \leq n$，保证技巧值唯一)</p>
 <h3 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h3><p><del>这道题差点写到心态爆炸</del> </p>
@@ -241,7 +241,7 @@
 <p>（$1 \leq n,m \leq2<em>10^5 ,1 \leq k \leq min(n,2000) ,1 \leq a_i \leq 2</em>10^5 ,1 \leq y_i \leq x_i \leq n$）</p>
 <h3 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h3><p><del>完全背包好题</del></p>
 <p>对于输入的铲子价格进行排序。（购买肯定选择最便宜的 $k$ 把铲子）</p>
-<p>然后从买1把铲子到 $k​$ 把铲子，对每种情况枚举所有优惠取最小。</p>
+<p>然后从买1把铲子到 $k$ 把铲子，对每种情况枚举所有优惠取最小。</p>
 <p>这里需要使用前缀和来获得没有被优惠（即免费）的铲子的花费。</p>
 <p><img src="/2019/04/17/Codeforces-Round-552(Div3)/div3-F.jpg" alt="div3-F"></p>
 <p>假设上图是进行到中间过程的情景。当前是购买 $i$ 把铲子的情况，假设当前可用的优惠之一是 $youhui[j]$。（它是一个pair数据，$first$ 是题目中 $x_i$ ，$second$ 是题目中 $y_i$。</p>
@@ -573,10 +573,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Codeforces</a>
               </li>
              
@@ -585,11 +581,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">测试赛</a>
+                <a href="javascript:void(0)" class="js-tag color5">div3</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">div3</a>
+                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计算几何</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">测试赛</a>
               </li>
             
             <div class="clearfix"></div>
