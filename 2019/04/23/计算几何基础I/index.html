@@ -17,7 +17,7 @@
 <meta property="og:description" content="为后面的点线面关系及凸包等做铺垫。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://fz-c.github.io/2019/04/23/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg">
-<meta property="og:updated_time" content="2019-04-23T09:07:05.829Z">
+<meta property="og:updated_time" content="2019-04-23T09:19:04.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算几何基础I">
 <meta name="twitter:description" content="为后面的点线面关系及凸包等做铺垫。">
@@ -200,8 +200,9 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vector <span class="keyword">operator</span> * (Point A, <span class="keyword">double</span> k) &#123;</span><br><span class="line">	<span class="keyword">return</span> Vector(A.x * k, A.y * k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>向量除法：$\vec{a}/k=\{a_1/k,b_1/k\}$</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vector <span class="keyword">operator</span> / (Point A, <span class="keyword">double</span> k) &#123;</span><br><span class="line">	<span class="keyword">return</span> Vector(A.x / k, A.y / k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="数量积"><a href="#数量积" class="headerlink" title="数量积"></a>数量积</h3><p>又叫点积，定义：$\vec{a} \cdot \vec{b}=|\vec{a}|<em>|\vec{b}|</em>cos\theta=a_1<em>a_2+b_1</em>b_2$</p>
-<p>满足的运算律有：</p>
+<h3 id="数量积"><a href="#数量积" class="headerlink" title="数量积"></a>数量积</h3><p>又叫点积，定义：</p>
+<script type="math/tex; mode=display">
+\vec{a} \cdot \vec{b}=\mid\vec{a}\mid\mid\vec{b}\mid cos\theta=a_1a_2+b_1b_2</script><p>满足的运算律有：</p>
 <ul>
 <li><p>分配律：$\vec{a}\cdot(\vec{b}+\vec{c})=\vec{a}\cdot\vec{b}+\vec{a}\cdot\vec{c}$</p>
 </li>
@@ -209,7 +210,9 @@
 </li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Dot</span><span class="params">(Vector A, Vector B)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> A.x* B.x + A.y * B.y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h3><p>又叫外积、叉积，定义：$|\vec{a}\times\vec{b}|=|\vec{a}|<em>|\vec{b}|</em>sin\theta=a_1<em>b_2-a_2</em>b_1$。向量积的结果的方向与$\vec{a}$和$\vec{b}$垂直且满足右手法则。</p>
+<h3 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h3><p>又叫外积、叉积，定义：</p>
+<script type="math/tex; mode=display">
+\mid\vec{a}\times\vec{b}\mid=\mid\vec{a}\mid*\mid\vec{b}\mid*sin\theta=a_1*b_2-a_2*b_1</script><p>向量积的结果的方向与$\vec{a}$和$\vec{b}$垂直且满足右手法则。</p>
 <p>满足的运算律有：</p>
 <ul>
 <li>反交换律：$\vec{a}\times\vec{b}=-\vec{b}\times\vec{a}$</li>
@@ -240,7 +243,9 @@
 <p><img src="/2019/04/23/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg" alt></p>
 <p>这时atan2()函数的值域就是$(-\pi,\pi)$了，点的极角也就确定了。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Point a, Point b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">atan2</span>(a.y, a.x) != <span class="built_in">atan2</span>(b.y, b.x))</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">atan2</span>(a.y, a.x) &lt; <span class="built_in">atan2</span>(b.y, b.x);</span><br><span class="line">	<span class="keyword">return</span> a.x &lt; b.x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>方法2：利用叉积排序</p>
+<ul>
+<li>方法2：利用叉积排序</li>
+</ul>
 <p>对于任意两个点$A$和$B$，我们可以比较$\vec{OA}$与$\vec{OB}$的叉乘的正负情况来判定方向。</p>
 <p>若叉乘为0，则两向量平行或者重合；若叉乘小于0，则$\vec{OA}$在$\vec{OB}$的逆时针方向；反之在顺时针方向。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//逆时针排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Point a, Point b)</span> </span>&#123;</span><br><span class="line">	Cross(a, b) == <span class="number">0</span> ? a.x &lt; b.x : Cross(a, b)&gt;<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
