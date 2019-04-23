@@ -12,16 +12,16 @@
 <meta name="keywords" content="集训队,计算几何,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算几何基础I">
-<meta property="og:url" content="http://FZ-c.github.io/2019/04/21/计算几何基础I/index.html">
+<meta property="og:url" content="http://FZ-c.github.io/2019/04/23/计算几何基础I/index.html">
 <meta property="og:site_name" content="老陈的程序员之路">
 <meta property="og:description" content="为后面的点线面关系及凸包等做铺垫。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://fz-c.github.io/2019/04/21/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg">
-<meta property="og:updated_time" content="2019-04-23T08:57:51.576Z">
+<meta property="og:image" content="http://fz-c.github.io/2019/04/23/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg">
+<meta property="og:updated_time" content="2019-04-23T09:00:39.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算几何基础I">
 <meta name="twitter:description" content="为后面的点线面关系及凸包等做铺垫。">
-<meta name="twitter:image" content="http://fz-c.github.io/2019/04/21/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg">
+<meta name="twitter:image" content="http://fz-c.github.io/2019/04/23/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg">
   
     <link rel="alternative" href="/atom.xml" title="老陈的程序员之路" type="application/atom+xml">
   
@@ -165,8 +165,8 @@
   
 
         
-        <a href="/2019/04/21/计算几何基础I/" class="archive-article-date">
-  	<time datetime="2019-04-21T06:34:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-21</time>
+        <a href="/2019/04/23/计算几何基础I/" class="archive-article-date">
+  	<time datetime="2019-04-23T08:46:06.802Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
 </a>
         
       </header>
@@ -237,7 +237,7 @@
 <p>容易得到：atan2(y,x)等价于atan(y/x)。</p>
 <p>我们知道，$arctan(x)$的值域是$(-\pi/2,\pi/2)$。那么， atan()函数的返回值的范围也是在$(-\pi/2,\pi/2)$中。</p>
 <p>但是，atan2的返回值却与坐标相关。见下图：</p>
-<p><img src="/2019/04/21/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg" alt></p>
+<p><img src="/2019/04/23/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg" alt></p>
 <p>这时atan2()函数的值域就是$(-\pi,\pi)$了，点的极角也就确定了。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Point a, Point b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">atan2</span>(a.y, a.x) != <span class="built_in">atan2</span>(b.y, b.x))</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">atan2</span>(a.y, a.x) &lt; <span class="built_in">atan2</span>(b.y, b.x);</span><br><span class="line">	<span class="keyword">return</span> a.x &lt; b.x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>方法2：利用叉积排序</p>
@@ -379,7 +379,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://FZ-c.github.io/2019/04/21/计算几何基础I/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://FZ-c.github.io/2019/04/23/计算几何基础I/" alt="微信分享二维码">
     </div>
 </div>
 
