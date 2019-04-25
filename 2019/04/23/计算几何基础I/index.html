@@ -17,7 +17,7 @@
 <meta property="og:description" content="为后面的点线面关系及凸包等做铺垫。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://fz-c.github.io/2019/04/23/计算几何基础I/03087bf40ad162d9d8bea3ff16dfa9ec8b13cd85.jpg">
-<meta property="og:updated_time" content="2019-04-23T09:19:04.304Z">
+<meta property="og:updated_time" content="2019-04-24T10:41:49.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算几何基础I">
 <meta name="twitter:description" content="为后面的点线面关系及凸包等做铺垫。">
@@ -191,7 +191,7 @@
 <h3 id="向量的定义"><a href="#向量的定义" class="headerlink" title="向量的定义"></a>向量的定义</h3><p>向量就是有方向的线段。我们记$A(a_1,b_1) ,B(a_2,b_2)$，则$\vec{AB}=(a_2-a_1,b_2-b_1)$。</p>
 <p>那么我们也可以使用前面点的存储来存储向量。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> Point Vector;</span><br></pre></td></tr></table></figure>
-<h2 id="相关运算"><a href="#相关运算" class="headerlink" title="相关运算"></a>相关运算</h2><p>$\vec{a}=\vec {AB}=\{a_1,b_2\},\vec{b}=\vec{CD}=\{a_2,b_2\}$，后不再赘述。</p>
+<h2 id="相关运算"><a href="#相关运算" class="headerlink" title="相关运算"></a>相关运算</h2><p>$\vec{a}=\vec {AB}=\{a_1,b_1\},\vec{b}=\vec{CD}=\{a_2,b_2\}$，后不再赘述。</p>
 <h3 id="基础运算"><a href="#基础运算" class="headerlink" title="基础运算"></a>基础运算</h3><p>向量加法：$\vec{a}+\vec{b}=\{a_1+a_2,b_1+b_2\}$</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vector <span class="keyword">operator</span> + (Point A, Point B) &#123;</span><br><span class="line">	<span class="keyword">return</span> Vector(A.x + B.x, A.y + B.y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>向量减法：$\vec{a}-\vec{b}=\{a_1-a_2,b_1-b_2\}$</p>
@@ -221,7 +221,7 @@
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Cross</span><span class="params">(Vector A, Vector B)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> A.x* B.y - A.y * B.x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="常用排序方法"><a href="#常用排序方法" class="headerlink" title="常用排序方法"></a>常用排序方法</h2><h3 id="水平序"><a href="#水平序" class="headerlink" title="水平序"></a>水平序</h3><p>即按照横坐标升序排列，若横坐标相同，则按照纵坐标升序排列。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> Point&amp; a, <span class="keyword">const</span> Point&amp; b) &#123;</span><br><span class="line">	a.x == b.x ? a.y &lt; b.y : a.x &lt; b.x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> Point&amp; a, <span class="keyword">const</span> Point&amp; b) &#123;</span><br><span class="line">	<span class="keyword">return</span> a.x == b.x ? a.y &lt; b.y : a.x &lt; b.x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>此排序方法将在Andrew算法中用到。</p>
 <h3 id="极角排序"><a href="#极角排序" class="headerlink" title="极角排序"></a>极角排序</h3><p>相关定义：</p>
 <p>在平面中取一个定点$O$，称为极点。由极点引一条射线$Ox$，称为极轴。选定一个长度单位和角度的正方向。（这样就建立了一个极坐标系）</p>
@@ -248,7 +248,7 @@
 </ul>
 <p>对于任意两个点$A$和$B$，我们可以比较$\vec{OA}$与$\vec{OB}$的叉乘的正负情况来判定方向。</p>
 <p>若叉乘为0，则两向量平行或者重合；若叉乘小于0，则$\vec{OA}$在$\vec{OB}$的逆时针方向；反之在顺时针方向。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//逆时针排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Point a, Point b)</span> </span>&#123;</span><br><span class="line">	Cross(a, b) == <span class="number">0</span> ? a.x &lt; b.x : Cross(a, b)&gt;<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//逆时针排序</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Point a, Point b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Cross(a, b) == <span class="number">0</span> ? a.x &lt; b.x : Cross(a, b)&gt;<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="其他常用函数"><a href="#其他常用函数" class="headerlink" title="其他常用函数"></a>其他常用函数</h2><ul>
 <li>求模（即长度）</li>
 </ul>
@@ -256,7 +256,7 @@
 <ul>
 <li>计算两向量夹角（利用叉积）</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Angle</span><span class="params">(Vector x, Vector y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">acos</span>(Dot(x, y) / Length(x) / Length(B));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Angle</span><span class="params">(Vector x, Vector y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">acos</span>(Dot(x, y) / Length(x) / Length(y));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>计算两向量构成的平行四边形面积</li>
 </ul>
@@ -397,6 +397,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/04/24/2019南昌网络赛/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          2019南昌网络赛
+        
+      </div>
+    </a>
   
   
     <a href="/2019/04/19/Codeforces-Round-553-div2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -576,11 +585,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">FZCOJ</a>
+                <a href="javascript:void(0)" class="js-tag color4">ACM</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
+                <a href="javascript:void(0)" class="js-tag color5">icpc</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -589,6 +598,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ccpc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">FZCOJ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">集训队</a>
               </li>
              
               <li class="article-tag-list-item">
