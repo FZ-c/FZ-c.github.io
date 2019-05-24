@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="老陈的程序员之路">
 <meta property="og:description" content="$ $">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T06:47:22.293Z">
+<meta property="og:updated_time" content="2019-05-24T06:48:59.624Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欧几里得算法及其扩展 最小公倍数">
 <meta name="twitter:description" content="$ $">
@@ -187,7 +187,7 @@
 (7,2)\to(5,2)\to(3,2)\to(2,1)\to(1,1)\to(1,0)</script><p>此时，我们可以得到7和2的最大公因子是1。</p>
 <h1 id="辗转相除法"><a href="#辗转相除法" class="headerlink" title="辗转相除法"></a>辗转相除法</h1><p>我们观察上面的序列：</p>
 <script type="math/tex; mode=display">
-(7,2)\to\color{yellow}(5,2)\to(3,2)\to(2,1)\color{white}\to(1,1)\to(1,0)</script><p>上面黄色部分其实是可以省略的。</p>
+(7,2)\to\color{yellow}{(5,2)\to(3,2)\to(2,1)}\to(1,1)\to(1,0)</script><p>上面黄色部分其实是可以省略的。</p>
 <p>我们可以发现，黄色部分中$b$总是不变的，直到$a&lt;b$。</p>
 <p>而每次都是进行减$b$的操作，那么我们可以得到最后$a$会变成$a\%b$。</p>
 <p>若我们记$gcd(a,b)$的值为$a,b$的最大公因子。那么我们可以得到下面的式子：</p>
