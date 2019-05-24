@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="老陈的程序员之路">
 <meta property="og:description" content="先挖一系列的坑，慢慢填~">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T02:56:14.242Z">
+<meta property="og:updated_time" content="2019-05-24T03:33:42.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="积性函数">
 <meta name="twitter:description" content="先挖一系列的坑，慢慢填~">
@@ -174,7 +174,7 @@
         <p>先挖一系列的坑，慢慢填~</p>
 <a id="more"></a>
 <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>积性函数：</p>
-<p>对于定义在正整数集上的函数$f(n)$（即算术函数），若当$gcdc(a,b)=1$时，有$f(a)f(b)=f(ab)$，则称$f(n)$为积性函数。</p>
+<p>对于定义在正整数集上的函数$f(n)$（即算术函数），若当$gcd(a,b)=1$时，有$f(a)f(b)=f(ab)$，则称$f(n)$为积性函数。</p>
 <p>完全积性函数：</p>
 <p>对于积性函数$f(n)$，若当$gcd(a,b)\neq 1$时，$f(a)f(b)=f(ab)$仍然成立，则称$f(x)$是完全积性的。</p>
 <h1 id="常见积性函数"><a href="#常见积性函数" class="headerlink" title="常见积性函数"></a>常见积性函数</h1><h2 id="欧拉函数-phi-n"><a href="#欧拉函数-phi-n" class="headerlink" title="欧拉函数 $\phi(n)$"></a>欧拉函数 $\phi(n)$</h2><p>定义：对于正整数$n$，欧拉函数$\phi(n)$的值等于不大于$n$的数中与$n$互质的数的数量。</p>
@@ -711,5 +711,21 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
