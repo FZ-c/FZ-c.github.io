@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://FZ-c.github.io/"/>
-  <updated>2019-05-24T06:50:25.913Z</updated>
+  <updated>2019-07-18T17:10:17.645Z</updated>
   <id>http://FZ-c.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019牛客多校第一场</title>
+    <link href="http://FZ-c.github.io/2019/07/18/2019%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1%E7%AC%AC%E4%B8%80%E5%9C%BA/"/>
+    <id>http://FZ-c.github.io/2019/07/18/2019牛客多校第一场/</id>
+    <published>2019-07-18T14:58:42.000Z</published>
+    <updated>2019-07-18T17:10:17.645Z</updated>
+    
+    <content type="html"><![CDATA[<p>传送门：<a href="https://ac.nowcoder.com/acm/contest/881#question" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/contest/881#question</a></p><a id="more"></a><h1 id="A-Equivalent-Prefixes"><a href="#A-Equivalent-Prefixes" class="headerlink" title="A. Equivalent Prefixes"></a>A. Equivalent Prefixes</h1><h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定两个$1-n$的排列$u$和$v$，求最长的前缀$p$，使得对于任意的$1\leq l \leq r\leq q$，都有$RMQ(u,l,r)=RMQ(v,l,r)$。</p><p>$RMQ(w,l,r)$的值为$w_l,w_{l+1},\dots,w_{r}$的最小值。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="B-Integration"><a href="#B-Integration" class="headerlink" title="B. Integration"></a>B. Integration</h1><h2 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意"></a>题目大意</h2><p>已知$\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}$。给定数组$a$，求$\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx$的值。假设结果为$\frac{p}{q}$，输出$p \cdot q^{-1} $。</p><h2 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="C-Euclidean-Distance"><a href="#C-Euclidean-Distance" class="headerlink" title="C. Euclidean Distance"></a>C. Euclidean Distance</h1><h2 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定一个$n$维点的坐标$A\left( \frac{a_1}{m},\frac{a_2}{m},\dots,\frac{a_n}{m}\right)$，其中$a_i$和$m$均为整数。现需要求$P\left(p_1,p_2,\dots,p_n\right)$满足：</p><ol><li>$p_1,p_2,\dots,p_n$均为非负实数</li><li>$p_1+p_2+\dots+p_n=1$</li><li>与$A$的距离$D=\sum_{i=1}^n \left( \frac{a_i}{m}-p_i\right)^2$最小。</li></ol><p>输出$D^2$。</p><h2 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="D-Parity-of-Tuples"><a href="#D-Parity-of-Tuples" class="headerlink" title="D. Parity of Tuples"></a>D. Parity of Tuples</h1><h2 id="题目大意-3"><a href="#题目大意-3" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定$n$个$m$元组$v_i=\left(a_{i,1},a_{i,2},\dots,a_{i,m}\right)$，定义函数$count(x)$的值为能使得对于所有的$j$，均有$a_{i,j} \wedge x$的结果的二进制拥有奇数个1的元组$v_i$的个数。</p><p>求$\bigoplus_{x=0}^{2^k-1}\left(count(x) \cdot 3^x mod \left(10^9+7\right)\right)$的值，$\bigoplus$为按位异或。</p><h2 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="E-ABBA"><a href="#E-ABBA" class="headerlink" title="E. ABBA"></a>E. ABBA</h1><h2 id="题目大意-4"><a href="#题目大意-4" class="headerlink" title="题目大意"></a>题目大意</h2><p>求可以分解成$n$个”AB”子序列和$m$个“BA”子序列的长度为$2(n+m)$的字符串的种类数$(mod 10^9+7)$。</p><h2 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="F-Random-Point-in-Triangle"><a href="#F-Random-Point-in-Triangle" class="headerlink" title="F. Random Point in Triangle"></a>F. Random Point in Triangle</h1><h2 id="题目大意-5"><a href="#题目大意-5" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定三角形$ABC$的三个点坐标$A,B,C$，现在三角形中均匀地取一点$P$，定义$E:=max \left( S_{\Delta PAB},S_{\Delta PBC},S_{\Delta PCA} \right)$，其中$S_{\Delta XYZ}$表示三角形$XYZ$的面积。</p><p>求$E$的期望值，输出$36 \times E$。</p><h2 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="G-Substrings-2"><a href="#G-Substrings-2" class="headerlink" title="G. Substrings 2"></a>G. Substrings 2</h1><h2 id="题目大意-6"><a href="#题目大意-6" class="headerlink" title="题目大意"></a>题目大意</h2><p>定义两字符串$u(u_1,u_2,\dots,u_k),v(v_1,v_2,\dots,v_l)$同构当且仅当$k=l$且存在一个映射$\phi$对于$i\in \{1,2,\dots,k\}$有$u_i=\phi(v_i)$成立。</p><p>映射：当且仅当$x \neq y$时有$f(x) \neq f(y)$，称$f$为一个映射。</p><p>给定一个字符串$s$，求最多能选出的子串的数量满足两两均不同构。</p><h2 id="解题思路-6"><a href="#解题思路-6" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="H-XOR"><a href="#H-XOR" class="headerlink" title="H. XOR"></a>H. XOR</h1><h2 id="题目大意-7"><a href="#题目大意-7" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定集合$A$，求所有$A$的子集$S$满足$S$的所有元素异或和为0的集合$S$的大小的和$(mod  10^9+7)$。</p><p>即求：</p><script type="math/tex; mode=display">\left(\sum_{S\subseteq A,\oplus_{x \in S}x=0}\midS\mid \right)mod\ (10^9+7)</script><p>其中，$\oplus$为按位异或。</p><h2 id="解题思路-7"><a href="#解题思路-7" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="I-Points-Division"><a href="#I-Points-Division" class="headerlink" title="I. Points Division"></a>I. Points Division</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个拥有$n$个点的集合$P\{(x_1,y_1),(x_2,y_2),\dots,(x_n,y_n)\}$，每个点拥有两个权值$a_i,b_i$。</p><p>现将集合$P$分割成两部分$A,B$。</p><p>定义一个分割$(A,B)$有效当且仅当不存在$i \in A$且$j \in B$，有$x_i \geq x_j$且$y_i \leq y_j$。</p><p>求所有有效分割$(A,B)$中$\left( \sum_{i \in A}a_i\right)+\left( \sum_{j \in B}b_i\right)$的最大值。</p><h2 id="解题思路-8"><a href="#解题思路-8" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-8"><a href="#代码-8" class="headerlink" title="代码"></a>代码</h2><p>待补</p><h1 id="J-Fraction-Comparision"><a href="#J-Fraction-Comparision" class="headerlink" title="J. Fraction Comparision"></a>J. Fraction Comparision</h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定两个分数$\frac{x}{a}$和$\frac{y}{b}$，比较他们的大小情况。</p><h2 id="解题思路-9"><a href="#解题思路-9" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p><h2 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h2><p>待补</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;传送门：&lt;a href=&quot;https://ac.nowcoder.com/acm/contest/881#question&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ac.nowcoder.com/acm/contest/881#question&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="牛客" scheme="http://FZ-c.github.io/categories/%E7%89%9B%E5%AE%A2/"/>
+    
+    
+      <category term="ACM" scheme="http://FZ-c.github.io/tags/ACM/"/>
+    
+      <category term="多校" scheme="http://FZ-c.github.io/tags/%E5%A4%9A%E6%A0%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>欧几里得算法及其扩展 最小公倍数</title>
@@ -135,9 +159,9 @@
       <category term="算法" scheme="http://FZ-c.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="算法" scheme="http://FZ-c.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="集训队" scheme="http://FZ-c.github.io/tags/%E9%9B%86%E8%AE%AD%E9%98%9F/"/>
+    
+      <category term="算法" scheme="http://FZ-c.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="计算几何" scheme="http://FZ-c.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
     

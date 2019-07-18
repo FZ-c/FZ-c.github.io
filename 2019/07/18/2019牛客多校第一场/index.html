@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://FZ-c.github.io">
-  <title>老陈的程序员之路</title>
+  <title>2019牛客多校第一场 | 老陈的程序员之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="老陈的程序员之路">
-<meta property="og:url" content="http://FZ-c.github.io/index.html">
+  <meta name="description" content="传送门：https://ac.nowcoder.com/acm/contest/881#question">
+<meta name="keywords" content="ACM,多校">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019牛客多校第一场">
+<meta property="og:url" content="http://FZ-c.github.io/2019/07/18/2019牛客多校第一场/index.html">
 <meta property="og:site_name" content="老陈的程序员之路">
+<meta property="og:description" content="传送门：https://ac.nowcoder.com/acm/contest/881#question">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-18T17:10:17.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="老陈的程序员之路">
+<meta name="twitter:title" content="2019牛客多校第一场">
+<meta name="twitter:description" content="传送门：https://ac.nowcoder.com/acm/contest/881#question">
   
     <link rel="alternative" href="/atom.xml" title="老陈的程序员之路" type="application/atom+xml">
   
@@ -146,16 +151,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2019牛客多校第一场" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-2019牛客多校第一场" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/18/2019牛客多校第一场/">2019牛客多校第一场</a>
+    <h1 class="article-title" itemprop="name">
+      2019牛客多校第一场
     </h1>
   
 
@@ -169,11 +172,89 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>传送门：<a href="https://ac.nowcoder.com/acm/contest/881#question" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/contest/881#question</a></p>
-        
-          <a class="article-more-a" href="/2019/07/18/2019牛客多校第一场/#more">more >></a>
-        
+<a id="more"></a>
+<h1 id="A-Equivalent-Prefixes"><a href="#A-Equivalent-Prefixes" class="headerlink" title="A. Equivalent Prefixes"></a>A. Equivalent Prefixes</h1><h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定两个$1-n$的排列$u$和$v$，求最长的前缀$p$，使得对于任意的$1\leq l \leq r\leq q$，都有$RMQ(u,l,r)=RMQ(v,l,r)$。</p>
+<p>$RMQ(w,l,r)$的值为$w_l,w_{l+1},\dots,w_{r}$的最小值。</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="B-Integration"><a href="#B-Integration" class="headerlink" title="B. Integration"></a>B. Integration</h1><h2 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意"></a>题目大意</h2><p>已知$\int_0^{\infty}\frac{1}{1+x^2}dx=\frac{\pi}{2}$。给定数组$a$，求$\frac{1}{\pi}\int_0^{\infty}\frac{1}{\prod{\left( a_i^2+x^2 \right) }}dx$的值。假设结果为$\frac{p}{q}$，输出$p \cdot q^{-1} $。</p>
+<h2 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="C-Euclidean-Distance"><a href="#C-Euclidean-Distance" class="headerlink" title="C. Euclidean Distance"></a>C. Euclidean Distance</h1><h2 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定一个$n$维点的坐标$A\left( \frac{a_1}{m},\frac{a_2}{m},\dots,\frac{a_n}{m}\right)$，其中$a_i$和$m$均为整数。现需要求$P\left(p_1,p_2,\dots,p_n\right)$满足：</p>
+<ol>
+<li>$p_1,p_2,\dots,p_n$均为非负实数</li>
+<li>$p_1+p_2+\dots+p_n=1$</li>
+<li>与$A$的距离$D=\sum_{i=1}^n \left( \frac{a_i}{m}-p_i\right)^2$最小。</li>
+</ol>
+<p>输出$D^2$。</p>
+<h2 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="D-Parity-of-Tuples"><a href="#D-Parity-of-Tuples" class="headerlink" title="D. Parity of Tuples"></a>D. Parity of Tuples</h1><h2 id="题目大意-3"><a href="#题目大意-3" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定$n$个$m$元组$v_i=\left(a_{i,1},a_{i,2},\dots,a_{i,m}\right)$，定义函数$count(x)$的值为能使得对于所有的$j$，均有$a_{i,j} \wedge x$的结果的二进制拥有奇数个1的元组$v_i$的个数。</p>
+<p>求$\bigoplus_{x=0}^{2^k-1}\left(count(x) \cdot 3^x mod \left(10^9+7\right)\right)$的值，$\bigoplus$为按位异或。</p>
+<h2 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="E-ABBA"><a href="#E-ABBA" class="headerlink" title="E. ABBA"></a>E. ABBA</h1><h2 id="题目大意-4"><a href="#题目大意-4" class="headerlink" title="题目大意"></a>题目大意</h2><p>求可以分解成$n$个”AB”子序列和$m$个“BA”子序列的长度为$2(n+m)$的字符串的种类数$(mod 10^9+7)$。</p>
+<h2 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="F-Random-Point-in-Triangle"><a href="#F-Random-Point-in-Triangle" class="headerlink" title="F. Random Point in Triangle"></a>F. Random Point in Triangle</h1><h2 id="题目大意-5"><a href="#题目大意-5" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定三角形$ABC$的三个点坐标$A,B,C$，现在三角形中均匀地取一点$P$，定义$E:=max \left( S_{\Delta PAB},S_{\Delta PBC},S_{\Delta PCA} \right)$，其中$S_{\Delta XYZ}$表示三角形$XYZ$的面积。</p>
+<p>求$E$的期望值，输出$36 \times E$。</p>
+<h2 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="G-Substrings-2"><a href="#G-Substrings-2" class="headerlink" title="G. Substrings 2"></a>G. Substrings 2</h1><h2 id="题目大意-6"><a href="#题目大意-6" class="headerlink" title="题目大意"></a>题目大意</h2><p>定义两字符串$u(u_1,u_2,\dots,u_k),v(v_1,v_2,\dots,v_l)$同构当且仅当$k=l$且存在一个映射$\phi$对于$i\in \{1,2,\dots,k\}$有$u_i=\phi(v_i)$成立。</p>
+<p>映射：当且仅当$x \neq y$时有$f(x) \neq f(y)$，称$f$为一个映射。</p>
+<p>给定一个字符串$s$，求最多能选出的子串的数量满足两两均不同构。</p>
+<h2 id="解题思路-6"><a href="#解题思路-6" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="H-XOR"><a href="#H-XOR" class="headerlink" title="H. XOR"></a>H. XOR</h1><h2 id="题目大意-7"><a href="#题目大意-7" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定集合$A$，求所有$A$的子集$S$满足$S$的所有元素异或和为0的集合$S$的大小的和$(mod  10^9+7)$。</p>
+<p>即求：</p>
+<script type="math/tex; mode=display">
+\left(\sum_{S\subseteq A,\oplus_{x \in S}x=0}\mid
+S\mid \right)mod\ (10^9+7)</script><p>其中，$\oplus$为按位异或。</p>
+<h2 id="解题思路-7"><a href="#解题思路-7" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="I-Points-Division"><a href="#I-Points-Division" class="headerlink" title="I. Points Division"></a>I. Points Division</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个拥有$n$个点的集合$P\{(x_1,y_1),(x_2,y_2),\dots,(x_n,y_n)\}$，每个点拥有两个权值$a_i,b_i$。</p>
+<p>现将集合$P$分割成两部分$A,B$。</p>
+<p>定义一个分割$(A,B)$有效当且仅当不存在$i \in A$且$j \in B$，有$x_i \geq x_j$且$y_i \leq y_j$。</p>
+<p>求所有有效分割$(A,B)$中$\left( \sum_{i \in A}a_i\right)+\left( \sum_{j \in B}b_i\right)$的最大值。</p>
+<h2 id="解题思路-8"><a href="#解题思路-8" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-8"><a href="#代码-8" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+<h1 id="J-Fraction-Comparision"><a href="#J-Fraction-Comparision" class="headerlink" title="J. Fraction Comparision"></a>J. Fraction Comparision</h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定两个分数$\frac{x}{a}$和$\frac{y}{b}$，比较他们的大小情况。</p>
+<h2 id="解题思路-9"><a href="#解题思路-9" class="headerlink" title="解题思路"></a>解题思路</h2><p>待补</p>
+<h2 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h2><p>待补</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao2.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin2.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -208,16 +289,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/18/2019牛客多校第一场/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://FZ-c.github.io/2019/07/18/2019牛客多校第一场/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/24/欧几里得算法及其扩展-最小公倍数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">欧几里得算法及其扩展 最小公倍数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -232,846 +372,48 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-欧几里得算法及其扩展-最小公倍数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/24/欧几里得算法及其扩展-最小公倍数/">欧几里得算法及其扩展 最小公倍数</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/24/欧几里得算法及其扩展-最小公倍数/" class="archive-article-date">
-  	<time datetime="2019-05-24T03:39:20.613Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>$ $</p>
-        
-          <a class="article-more-a" href="/2019/05/24/欧几里得算法及其扩展-最小公倍数/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/24/欧几里得算法及其扩展-最小公倍数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-Equivalent-Prefixes"><span class="toc-number">1.</span> <span class="toc-text">A. Equivalent Prefixes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意"><span class="toc-number">1.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">1.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">1.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#B-Integration"><span class="toc-number">2.</span> <span class="toc-text">B. Integration</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-1"><span class="toc-number">2.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-1"><span class="toc-number">2.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-Euclidean-Distance"><span class="toc-number">3.</span> <span class="toc-text">C. Euclidean Distance</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意-2"><span class="toc-number">3.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-2"><span class="toc-number">3.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-2"><span class="toc-number">3.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#D-Parity-of-Tuples"><span class="toc-number">4.</span> <span class="toc-text">D. Parity of Tuples</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意-3"><span class="toc-number">4.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-3"><span class="toc-number">4.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-3"><span class="toc-number">4.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#E-ABBA"><span class="toc-number">5.</span> <span class="toc-text">E. ABBA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意-4"><span class="toc-number">5.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-4"><span class="toc-number">5.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-4"><span class="toc-number">5.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#F-Random-Point-in-Triangle"><span class="toc-number">6.</span> <span class="toc-text">F. Random Point in Triangle</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意-5"><span class="toc-number">6.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-5"><span class="toc-number">6.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-5"><span class="toc-number">6.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#G-Substrings-2"><span class="toc-number">7.</span> <span class="toc-text">G. Substrings 2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意-6"><span class="toc-number">7.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-6"><span class="toc-number">7.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-6"><span class="toc-number">7.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#H-XOR"><span class="toc-number">8.</span> <span class="toc-text">H. XOR</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目大意-7"><span class="toc-number">8.1.</span> <span class="toc-text">题目大意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-7"><span class="toc-number">8.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-7"><span class="toc-number">8.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#I-Points-Division"><span class="toc-number">9.</span> <span class="toc-text">I. Points Division</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">9.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-8"><span class="toc-number">9.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-8"><span class="toc-number">9.3.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#J-Fraction-Comparision"><span class="toc-number">10.</span> <span class="toc-text">J. Fraction Comparision</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述-1"><span class="toc-number">10.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路-9"><span class="toc-number">10.2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码-9"><span class="toc-number">10.3.</span> <span class="toc-text">代码</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-积性函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/23/积性函数/">积性函数</a>
-    </h1>
   
 
-        
-        <a href="/2019/05/23/积性函数/" class="archive-article-date">
-  	<time datetime="2019-05-23T01:30:28.927Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先挖一系列的坑，慢慢填~</p>
-        
-          <a class="article-more-a" href="/2019/05/23/积性函数/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/23/积性函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-莫比乌斯反演" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/09/莫比乌斯反演/">莫比乌斯反演</a>
-    </h1>
   
 
-        
-        <a href="/2019/05/09/莫比乌斯反演/" class="archive-article-date">
-  	<time datetime="2019-05-09T05:10:22.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<p>待更。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/09/莫比乌斯反演/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-2019南昌网络赛" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/24/2019南昌网络赛/">2019南昌网络赛</a>
-    </h1>
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'fzchen'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
-        
-        <a href="/2019/04/24/2019南昌网络赛/" class="archive-article-date">
-  	<time datetime="2019-04-24T10:42:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>传送门：<a href="https://www.jisuanke.com/contest/2290?view=challenges" target="_blank" rel="noopener">https://www.jisuanke.com/contest/2290?view=challenges</a></p>
-        
-          <a class="article-more-a" href="/2019/04/24/2019南昌网络赛/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">icpc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/计蒜客//" class="article-tag-list-link color4">计蒜客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/24/2019南昌网络赛/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-计算几何基础I" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/23/计算几何基础I/">计算几何基础I</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/23/计算几何基础I/" class="archive-article-date">
-  	<time datetime="2019-04-23T08:46:06.802Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>为后面的点线面关系及凸包等做铺垫。</p>
-        
-          <a class="article-more-a" href="/2019/04/23/计算几何基础I/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">集训队</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">计算几何</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/23/计算几何基础I/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces-Round-553-div2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/19/Codeforces-Round-553-div2/">Codeforces Round #553(div2) </a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/19/Codeforces-Round-553-div2/" class="archive-article-date">
-  	<time datetime="2019-04-19T03:36:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目列表：<a href="https://codeforces.com/contest/1151/problems" target="_blank" rel="noopener">https://codeforces.com/contest/1151/problems</a></p>
-<p>传送门：<a href="https://codeforces.com/contest/1151" target="_blank" rel="noopener">https://codeforces.com/contest/1151</a></p>
-        
-          <a class="article-more-a" href="/2019/04/19/Codeforces-Round-553-div2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">div2</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Codeforces//" class="article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/19/Codeforces-Round-553-div2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019省赛预备-Practice-Round-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/18/2019省赛预备-Practice-Round-1/">2019省赛预备-Practice Round 1</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/18/2019省赛预备-Practice-Round-1/" class="archive-article-date">
-  	<time datetime="2019-04-18T08:39:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目列表：<a href="https://codeforces.com/gym/242928/attachments/download/7292/statements.pdf" target="_blank" rel="noopener">https://codeforces.com/gym/242928/attachments/download/7292/statements.pdf</a></p>
-<p>传送门：<a href="https://codeforces.com/gym/242928" target="_blank" rel="noopener">https://codeforces.com/gym/242928</a></p>
-        
-          <a class="article-more-a" href="/2019/04/18/2019省赛预备-Practice-Round-1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ccpc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Codeforces//" class="article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/18/2019省赛预备-Practice-Round-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Codeforces-Round-552(Div3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/17/Codeforces-Round-552(Div3)/">Codeforces Round #552（Div3）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/17/Codeforces-Round-552(Div3)/" class="archive-article-date">
-  	<time datetime="2019-04-16T20:39:53.749Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>题目列表：<a href="https://codeforces.com/contest/1154/problems" target="_blank" rel="noopener">https://codeforces.com/contest/1154/problems</a></p>
-<p>传送门：<a href="https://codeforces.com/contest/1154" target="_blank" rel="noopener">https://codeforces.com/contest/1154</a></p>
-        
-          <a class="article-more-a" href="/2019/04/17/Codeforces-Round-552(Div3)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">div3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Codeforces//" class="article-tag-list-link color1">Codeforces</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/17/Codeforces-Round-552(Div3)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-测试赛I题目及题解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/14/测试赛I题目及题解/">测试赛I题目及题解</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/14/测试赛I题目及题解/" class="archive-article-date">
-  	<time datetime="2019-04-14T10:03:01.850Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>传送门：<a href="http://fzcoj.hustoj.com/contest.php?cid=1061" target="_blank" rel="noopener">http://fzcoj.hustoj.com/contest.php?cid=1061</a></p>
-        
-          <a class="article-more-a" href="/2019/04/14/测试赛I题目及题解/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">FZCOJ</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">集训队</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">测试赛</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/FZCOJ//" class="article-tag-list-link color1">FZCOJ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/14/测试赛I题目及题解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -1094,8 +436,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
