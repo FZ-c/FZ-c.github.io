@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="老陈的程序员之路">
 <meta property="og:description" content="$ $">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T06:50:25.913Z">
+<meta property="og:updated_time" content="2020-07-08T06:18:08.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欧几里得算法及其扩展 最小公倍数">
 <meta name="twitter:description" content="$ $">
@@ -222,31 +222,26 @@ F_n=F_{n-1}+F_{n-2}</script><p>我们将等式左右两边同时除以$F_{n-1}$�
 <script type="math/tex; mode=display">
 \begin{equation} 
 \frac{F_n}{F_{n-1}}=1+\frac{F_{n-2}}{F_{n-1}} 
-\label{eq:formula_1}
 \end{equation}
 \tag{1}</script><p>我们记$R_n=\frac{F_n}{F_{n-1}}$，那么对于$\eqref{eq:formula_1}$式，我们有：</p>
 <script type="math/tex; mode=display">
 \begin{equation} 
 R_n=1+\frac{1}{R_{n-1}} 
-\label{eq:formula_2}
 \end{equation}
 \tag{2}</script><p>我们<font color="red">假设</font>：</p>
 <script type="math/tex; mode=display">
 \begin{equation} 
 \lim_{n\to \infty}R_n=\phi
-\label{eq:formula_3}
 \end{equation}
 \tag{3}</script><p>那么我们有：</p>
 <script type="math/tex; mode=display">
 \begin{equation} 
 \phi=1+\frac{1}{\phi}
-\label{eq:formula_4}
 \end{equation}
 \tag{4}</script><p>等式左右两边乘以$\phi$，解方程可得：</p>
 <script type="math/tex; mode=display">
 \begin{equation} 
 \phi_1=\frac{\sqrt{5}+1}{2}\  \ \ \phi_2=\frac{\sqrt{5}-1}{2} 
-\label{eq:formula_5}
 \end{equation}
 \tag{5}</script><p>即我们可以得到：$F_n\approx\phi_1F_{n-1}$。（$\phi_2$舍弃，$\phi_1\approx1.618\dots$）</p>
 <p>更进一步地，我们可以得到：</p>
